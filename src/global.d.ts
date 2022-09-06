@@ -8,3 +8,4 @@ declare module "*.scss" {
   export default exports;
 }
 
+declare const unsafeWindow: Window; /* eslint-disable-line no-unused-vars */

@@ -1,11 +1,14 @@
 const webpack = require('webpack');
 const path = require('path');
+const WebpackUserscript = require('webpack-userscript');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const headers = require('./src/headers.js');
 const config = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'remove_annoying_popups.js'
   },
   devServer: {
     host: '0.0.0.0',
@@ -32,7 +35,13 @@ const config = {
       '.ts',
       '.js'
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new WebpackUserscript({
+      headers: headers
+    })
+  ]
 };
 
 module.exports = config;
