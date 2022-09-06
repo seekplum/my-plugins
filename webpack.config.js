@@ -7,6 +7,11 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  devServer: {
+    host: '0.0.0.0',
+    port: 12345,
+    static: path.join(__dirname, 'dist')
+  },
   module: {
     rules: [
       {
