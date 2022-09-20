@@ -34,6 +34,15 @@ function removeModalByCSDN(): boolean {
   return true;
 }
 
+function removeModalByAliyun(): boolean {
+  const maskElem = document.querySelector(".ace-overlay-wrapper.opened");
+  if (!maskElem) {
+    return false;
+  }
+  maskElem.remove();
+  return true;
+}
+
 interface Rule {
   host?: string;
   prefix?: string;
@@ -55,6 +64,10 @@ function parseRemoveFunc(hostname: string): Function {
     {
       host: "blog.csdn.net",
       use: removeModalByCSDN,
+    },
+    {
+      host: "developer.aliyun.com",
+      use: removeModalByAliyun,
     },
   ];
 

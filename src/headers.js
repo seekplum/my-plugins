@@ -9,8 +9,14 @@ const headers = {
     "http*://open.douyin.com/*",
     "http*://blog.csdn.net/*",
     "http*://tbgr.huanleguang.com/*",
+    "http*://developer.aliyun.com/article/*",
   ],
-  connect: ["blog.csdn.net", "open.douyin.com", "tbgr.huanleguang.com"],
+  connect: [
+    "blog.csdn.net",
+    "open.douyin.com",
+    "tbgr.huanleguang.com",
+    "developer.aliyun.com",
+  ],
   "run-at": "document-body",
   grant: ["unsafeWindow"],
 };
