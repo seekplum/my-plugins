@@ -4,7 +4,7 @@ const headers = {
   author: "seekplum",
   description: "删除一些无效的弹窗",
   version: dev ? `[version]-build.[buildNo]` : `[version]`,
-  downloadURL: "http://127.0.0.1:12345/remove_annoying_popups.js",
+  downloadURL: "https://gist.github.com/seekplum/083ac706566eba7cf3af8302e1152a31/raw/adf5d81ccc2e15f71ec55fcbee60d52c54445e25/remove_annoying_popups.user.js",
   match: [
     "http*://open.douyin.com/*",
     "http*://blog.csdn.net/*",
