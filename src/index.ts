@@ -43,6 +43,15 @@ function removeModalByAliyun(): boolean {
   return true;
 }
 
+function removeModalByJiRiTeMai(): boolean {
+  const maskElem = document.querySelector(".auxo-modal-root");
+  if (!maskElem) {
+    return false;
+  }
+  maskElem.remove();
+  return true;
+}
+
 interface Rule {
   host?: string;
   prefix?: string;
@@ -68,6 +77,10 @@ function parseRemoveFunc(hostname: string): Function {
     {
       host: "developer.aliyun.com",
       use: removeModalByAliyun,
+    },
+    {
+      host: "fxg.jinritemai.com",
+      use: removeModalByJiRiTeMai,
     },
   ];
 
